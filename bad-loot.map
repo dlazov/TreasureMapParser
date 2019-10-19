@@ -1,0 +1,9 @@
+walk,10,N
+run,15,S
+walk,10,E
+walk,10,N
+walk,30,W
+horse trot,30,W
+WALK,45,N
+Walk,15,s,
+Boat,1.5,M

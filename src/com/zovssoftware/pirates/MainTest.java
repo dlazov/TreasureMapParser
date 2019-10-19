@@ -1,6 +1,6 @@
 package com.zovssoftware.pirates;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class MainTest {
 
@@ -14,5 +14,9 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void main() {
+    }
+
+    @Test
+    void testMain() {
     }
 }

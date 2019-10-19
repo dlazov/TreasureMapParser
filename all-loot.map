@@ -1,0 +1,44 @@
+walk,60,N
+walk,50,E
+walk,40,S
+walk,30,N
+walk,20,w
+walk,15,n
+walk,10,s
+walk,5,w
+run,60,N
+run,50,E
+run,40,S
+run,30,N
+run,20,w
+run,15,n
+run,10,s
+run,5,w
+horse trot,60,N
+horse trot,50,E
+horse trot,40,S
+horse trot,30,N
+horse trot,20,w
+horse trot,15,n
+horse trot,10,s
+horse trot,5,w
+horse gallop,60,N
+horse gallop,50,E
+horse gallop,40,S
+horse gallop,30,N
+horse gallop,20,w
+horse gallop,15,n
+horse gallop,10,s
+horse gallop,5,w
+Elephant ride,60,N
+Elephant ride,50,E
+Elephant ride,40,S
+Elephant ride,30,N
+Elephant ride,20,w
+Elephant ride,15,n
+Elephant ride,10,s
+Elephant ride,5,w
+Horse Trot,30,W
+WALK,90,N
+Walk,100,s,
+horse GallOp,30,E

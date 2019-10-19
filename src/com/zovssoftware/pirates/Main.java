@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Matie! th' map t' be scrutinized fer th' loot!");
+        System.out.println("\nMatie! th' map t' be scrutinized fer th' loot!\n");
 
         ScanAndParse scanAndParse = new ScanAndParse().invoke();
         LinkedList<String> list = scanAndParse.getList();
@@ -15,9 +15,13 @@ public class Main {
         int size = list.size();
         int count = scanAndParse.getCount();
         while (i.hasNext() && list.size() > count) {
-            ScanAndParse.parseData(list, size, count);
+            ScanAndParse.parseData(list, count);
             ++count;
         }
-        System.out.println("These are th' loot maps steps ye loot: " + list);
+
+        for (String a : list) {
+            System.out.println("These are th' steps to ye loot: " + a.toUpperCase());
+        }
+        System.out.println();
     }
 }
