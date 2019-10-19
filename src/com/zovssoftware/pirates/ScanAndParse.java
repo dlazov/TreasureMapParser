@@ -8,20 +8,22 @@ import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
-public class ScanAndParse {
+class ScanAndParse {
     private static int WALK_SPEED = 3;
     private static int RUN_SPEED = 6;
     private static int HORSE_TROT = 4;
     private static int HORSE_GALLOP = 15;
     private static int ELEPHANT_RIDE = 6;
     private LinkedList<String> list;
+    private static double milesTraveled = 0.0;
 
     // Parses the input data by splitting the the string and doing logic checks on the split out data.
-    public static void parseData(LinkedList<String> list, int count) {
+    // TODO: DGL - Append total miles, direction and speed to LinkedList.
+    static void parseData(LinkedList<String> list, int count) {
         if (!list.isEmpty()) {
-            int speed = 0;
             String listNormalized = list.get(count).toLowerCase();
             String[] splitString = listNormalized.split(",", 0);
+            int speed = 0;
             speed = getTravelSpeed(speed, splitString[0]);
             int time = 0;
             getMilesTraveled(speed, time, splitString[1]);
@@ -54,22 +56,16 @@ public class ScanAndParse {
         } catch (NumberFormatException nfe) {
             nfe.printStackTrace();
         }
-        double milesTraveled = 0.0;
-        int minutes = 0;
+
         if (speed == WALK_SPEED) {
-            minutes = 20;
             milesTraveled = getMph(speed, timeTraveled);
         } else if (speed == RUN_SPEED) {
-            minutes = 10;
             milesTraveled = getMph(speed, timeTraveled);
         } else if (speed == HORSE_TROT) {
-            minutes = 15;
             milesTraveled = getMph(speed, timeTraveled);
         } else if (speed == HORSE_GALLOP) {
-            minutes = 4;
             milesTraveled = getMph(speed, timeTraveled);
         } else if (speed == ELEPHANT_RIDE) {
-            minutes = 10;
             milesTraveled = getMph(speed, timeTraveled);
         } else {
             System.out.println("\nYe got th' wrong booty map Matie! Ye used: " + stringTime);
@@ -108,18 +104,19 @@ public class ScanAndParse {
         return speed;
     }
 
-    public int getCount() {
-        int count = 0;
-        return count;
+    int getCount() {
+        return 0;
     }
 
-    public LinkedList<String> getList() {
+    LinkedList<String> getList() {
         return list;
     }
 
-    public ScanAndParse invoke() {
-        String content = new String();
-        /** NOTE: use of these pre-loaded maps, only one at a time. */
+    ScanAndParse invoke() {
+        String content;
+        /**
+         * NOTE: use of these pre-loaded maps, only one at a time.
+         * */
         // TODO: DGL - Load a file from the command line.
         File file = new File("loot.map");
 //        File file = new File("all-loot.map");
